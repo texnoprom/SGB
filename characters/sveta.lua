@@ -174,7 +174,7 @@ function p_sveta()
 			fileexist(seensveta,'pic/sveta/'..where(s).nam..'/'..s._sost..'.jpg');			
 			--seensveta.pic = 'pic/sveta/'..where(s).nam..'/'..s._sost..'.jpg';
 			--описание по умолчанию
-			if s._sost=='work' then 	s.dsc =  ' {Света за работой}. '; end;
+			if s._sost=='work' then 	s.dsc =  ' {Света } у машины. '; end;
 			if s._sost=='tv' then 		s.dsc = ' {Света } смотрит телевизор. ';	end;
 			if s._sost=='car' then 		s.dsc = ' {Света } помогает отчиму. ';	end;
 			if s._sost=='tea' then 		s.dsc = ' {Света } пьёт чай. ';	end;
@@ -220,8 +220,8 @@ function p_sveta()
 						
 				end;
 			end;
-			
-			if (s._sost=='sleep')  or (s._sost=='mas')  then -- состояния с 4мя случайными картинками.
+			pn ('квест'..s_help..s._sost)
+			if (s._sost=='sleep')  or (s._sost=='mas') or ((s._sost=='work') and (s_help >0)) then -- состояния с 4мя случайными картинками.
 				fileexist(seensveta,'pic/sveta/'..where(s).nam..'/'..s._sost..rnd(4)..'.jpg');
 			--	seensveta.pic = 'pic/sveta/'..where(s).nam..'/'..s._sost..rnd(4)..'.jpg';
 			end;		

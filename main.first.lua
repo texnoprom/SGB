@@ -75,6 +75,8 @@ dofile "quests/s_heart.lua"
 dofile "quests/a_heart.lua"
 -- действия Мамы для ивента с сердцем
 dofile "quests/m_heart.lua"
+-- ивенты светы в гараже
+dofile "quests/s_garag.lua"
 
 walk(main)
 -- vim:ts=4

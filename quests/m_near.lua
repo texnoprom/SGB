@@ -44,6 +44,8 @@ room_s_near = room{ -- комната, куда нужно прописыват�
 			walkout();	
 		elseif kv_heart ==3 then
 			walk ('s_heart_start');	
+		elseif (s_help >0) and (where(sveta)==garag) then
+			walk ('s_garag');		
 
 		else
 			pn (_([[^	Я перекинулся парой фраз со Светой.	]]));
